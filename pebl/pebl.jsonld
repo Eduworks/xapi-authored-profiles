@@ -1,0 +1,255 @@
+{
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "id": "https://w3id.org/xapi/pebl",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "PeBL Vocabulary"
+    },
+    "definition": {
+        "en": "PeBL leverages xAPI to perform communication, persist data, and to synchronize between multiple platforms"
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "",
+            "generatedAtTime": "",
+            "wasRevisionOf": ["https://w3id.org/xapi/"]
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "Eduworks"
+    },
+    "concepts": [
+        {
+            "type": "Verb",
+            "id": "https://w3id.org/xapi/adl/verbs/logged-in",
+            "inScheme": "https://w3id.org/xapi/adl/v1.0",
+            "definition": {
+                "en": "Indicates the actor gained access to a system or service by identifying and authenticating with the credentials provided by the actor."
+            },
+            "prefLabel": {
+                "en": "logged-in"
+            }
+        },
+        
+        {
+            "type": "Verb",
+            "id": "https://w3id.org/xapi/adl/verbs/logged-out",
+            "inScheme": "https://w3id.org/xapi/adl/v1.0",
+            "definition": {
+                "en": "Indicates the actor either lost or discontinued access to a system or service."
+            },
+            "prefLabel": {
+                "en": "logged-out"
+            }
+        },
+        
+        {
+            "type": "Verb",
+            "id": "http://adlnet.gov/expapi/verbs/preferred",
+            "inScheme": "https://w3id.org/xapi/adl/v1.0",
+            "prefLabel": {
+                "en": "preferred"
+            },
+            "definition": {
+                "en": "Indicates the selected choices, favored options or settings of an actor in relation to an object or activity."
+            }
+        },
+        
+        {
+            "type": "Verb",
+            "id": "http://adlnet.gov/expapi/verbs/completed",
+            "inScheme": "https://w3id.org/xapi/scorm/v1.0",
+            "exactMatch": [ "http://activitystrea.ms/schema/complete" ],
+            "prefLabel": {
+                "en": "completed"
+            },
+            "definition": {
+                "en": "Indicates the actor finished or concluded the activity normally."
+            }
+        },
+        
+        {
+            "type": "Verb",
+            "id": "http://adlnet.gov/expapi/verbs/failed",
+            "inScheme": "https://w3id.org/xapi/scorm/v1.0",
+            "prefLabel": {
+                "en": "failed"
+            },
+            "definition": {
+                "en": "Indicates the actor did not successfully pass an activity to a level of predetermined satisfaction."
+            }
+        },
+        
+        {
+            "type": "Verb",
+            "id": "http://adlnet.gov/expapi/verbs/passed",
+            "inScheme": "https://w3id.org/xapi/scorm/v1.0",
+            "prefLabel": {
+                "en": "passed"
+            },
+            "definition": {
+                "en": "Indicates the actor successfully passed an activity to a level of predetermined satisfaction."
+            },
+            "broader": ["http://adlnet.gov/expapi/verbs/completed"]
+        },
+        
+        {
+            "type": "Verb",
+            "id": "http://adlnet.gov/expapi/verbs/answered",
+            "inScheme": "https://w3id.org/xapi/adl/v1.0",
+            "prefLabel": {
+                "en": "answered"
+            },
+            "definition": {
+                "en": "Indicates the actor replied to a question, where the object is generally an activity representing the question. The text of the answer will often be included in the response inside result."
+            }
+        },
+        
+        {
+            "type": "Verb",
+            "id": "http://adlnet.gov/expapi/verbs/interacted",
+            "inScheme": "https://w3id.org/xapi/adl/v1.0",
+            "relatedMatch": [ "http://activitystrea.ms/schema/interact" ],
+            "prefLabel": {
+                "en": "interacted"
+            },
+            "definition": {
+                "en": "Indicates the actor engaged with a physical or virtual object."
+            }
+        },
+        
+        {
+            "type": "Verb",
+            "id": "http://adlnet.gov/expapi/verbs/initialized",
+            "inScheme": "https://w3id.org/xapi/scorm/v1.0",
+            "prefLabel": {
+                "en": "initialized"
+            },
+            "definition": {
+                "en": "Indicates the activity provider has determined that the actor successfully started an activity."
+            }
+        },
+        
+        {
+            "type": "Verb",
+            "id": "http://adlnet.gov/expapi/verbs/terminated",
+            "inScheme": "https://w3id.org/xapi/scorm/v1.0",
+            "prefLabel": {
+                "en": "terminated"
+            },
+            "definition": {
+                "en": "Indicates that the actor successfully ended an activity."
+            }
+        },
+        
+        {
+            "type": "Verb",
+            "id": "http://adlnet.gov/expapi/verbs/exited",
+            "inScheme": "https://w3id.org/xapi/adl/v1.0",
+            "prefLabel": {
+                "en": "exited"
+            },
+            "definition": {
+                "en": "Indicates the actor intentionally departed from the activity or object."
+            }
+        },
+
+        {
+            "type": "Verb",
+            "id": "http://adlnet.gov/expapi/verbs/voided",
+            "inScheme": "https://w3id.org/xapi/adl/v1.0",
+            "prefLabel": {
+                "en": "voided"
+            },
+            "definition": {
+                "en": "A special reserved verb used by a LRS or application to mark a statement as invalid. See the xAPI specification for details on Voided statements."
+            }
+        },
+
+        {
+            "type": "Verb",
+            "id": "http://adlnet.gov/expapi/verbs/shared",
+            "inScheme": "https://w3id.org/xapi/adl/v1.0",
+            "exactMatch": [ "http://activitystrea.ms/schema/share" ],
+            "prefLabel": {
+                "en": "shared"
+            },
+            "definition": {
+                "en": "Indicates the actor's intent to openly provide access to an object of common interest to other actors or groups."
+            }
+        },
+
+        {
+            "type": "Verb",
+            "id": "http://adlnet.gov/expapi/verbs/commented",
+            "inScheme": "https://w3id.org/xapi/adl/v1.0",
+            "prefLabel": {
+                "en": "commented"
+            },
+            "definition": {
+                "en": "Indicates the actor provided digital or written annotations on or about an object."
+            }
+        }
+        
+        --{
+            "type": "Verb",
+            "id": "http://adlnet.gov/expapi/verbs/entered",
+            "inScheme": "https://w3id.org/xapi/adl/v1.0",
+            "prefLabel": {
+                "en": "entered"
+            },
+            "definition": {
+                "en": "Indicates the actor intentionally departed from the activity or object."
+            }
+            --},
+
+        
+        
+
+
+
+
+        
+    ],
+    "templates": [
+        {
+            "id": "https://w3id.org/xapi/newprofilename#templatename",
+            "type": "StatementTemplate",
+            "inScheme": "https://w3id.org/xapi/newprofilename",
+            "prefLabel": {
+                "en": "Restrictions for all of this profile's Statements"
+            },
+            "verb": "",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included",
+                    "scopeNote": ""
+                }
+            ]
+        }],
+    "patterns": [
+        {
+            "id": "https://w3id.org/xapi/newprofilename5#patternname",
+            "type": "Pattern",
+            "primary": true,
+            "prefLabel": {
+                "en": "Title of Pattern"
+            },
+            "definition": {
+                "en": "Provide a description here."
+            },
+            "inScheme": "https://w3id.org/xapi/newprofilename5",
+            "sequence": ["", ""]
+        }
+
+
+    ]
+}
